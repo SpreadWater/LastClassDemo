@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">省钱日报</string>
+    <string name="editone">记一笔</string>
+    <string name="month_out">本月支出</string>
+    <string name="month_in">本月收入</string>
+    <string name="budget">预算剩余</string>e
+    <string name="see_excel">查看图标分析</string>
+</resources>
