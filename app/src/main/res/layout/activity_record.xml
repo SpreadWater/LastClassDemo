@@ -16,6 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
+            android:onClick="onClick"
             android:src="@mipmap/ih_error" />
         <!-- 1.tab的位置  2.tab的模式，可滑动。3.tab文本的颜色-->
         <com.google.android.material.tabs.TabLayout
