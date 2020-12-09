@@ -56,24 +56,12 @@
         android:numColumns="5"
         android:paddingTop="5dp"
         android:paddingBottom="5dp" />
-    <!--TODO 自定义View的一个软键盘-->
-    <android.inputmethodservice.KeyboardView
-        android:id="@+id/frag_record_keyborad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/grey_f3f3f3"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:keyTextColor="@color/black"
-        android:paddingTop="1dp"
-        android:shadowColor="@color/white"
-        android:shadowRadius="0.0" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/frag_record_keyborad"
         android:background="@color/white">
 
         <TextView
@@ -93,4 +81,17 @@
             android:text="添加备注" />
     </RelativeLayout>
 
+    <!--TODO 自定义View的一个软键盘-->
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/frag_record_keyborad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyTextColor="@color/black"
+        android:paddingTop="1dp"
+        android:shadowColor="@color/white"
+        android:shadowRadius="0.0" />
 </RelativeLayout>
