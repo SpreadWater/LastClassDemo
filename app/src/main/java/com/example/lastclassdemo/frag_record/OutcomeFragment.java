@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -41,8 +42,26 @@ public class OutcomeFragment extends Fragment {
         initView(view);
         //给gridview填充数据
         loadDataToGv();
+        setGVListener();
         return view;
     }
+    //设置点击事件
+    private void setGVListener() {
+            typeGv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                    adapter.selectPos=position;
+                    adapter.notifyDataSetInvalidated();//提示绘制发生变化了
+                    TypeBean typeBean=typeList.get(position);
+                    String typename=typeBean.getTypename();
+                    typeTv.setText(typename);
+
+                    int sImageId=typeBean.getSimageId();
+                    typeIv.setImageResource(sImageId);
+                }
+            });
+    }
+
 
     private void loadDataToGv() {
         typeList=new ArrayList<>();

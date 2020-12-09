@@ -22,7 +22,7 @@ import java.util.List;
 public class TypeBaseAdapter extends BaseAdapter {
     Context context;
     List<TypeBean>mDatas;
-    int selectPos=0;//本次点击的位置
+    public int selectPos=0;//本次点击的位置
     public TypeBaseAdapter(Context context, List<TypeBean> mDatas) {
         this.context = context;
         this.mDatas = mDatas;
